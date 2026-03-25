@@ -33,6 +33,7 @@ This is the central contract and table of contents for all agents working in thi
   - `runbooks/` → Operational how-to guides and procedures
   - `autonomy-grants/` → Written approvals for L4 supervised autonomous actions
   - `checklists/` → Pre-plan and post-execution checklists
+- `docs/symphony-integration.md` → Guide for integrating Symphony orchestration
 - `AGENTS.md` → This file — update after any major change or new capability
 
 ## How to Use This Template
