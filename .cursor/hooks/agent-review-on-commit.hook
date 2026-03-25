@@ -1,0 +1,9 @@
+# Hook: Agent Review on Commit
+
+Trigger: Before any commit is made
+Purpose: Enforce Harness safety — never allow commits without review.
+
+Action:
+- Automatically trigger Agent Review on the staged changes
+- Require explicit human approval before the commit can proceed
+- Display reminder: "All commits must go through Agent Review per Harness rules"

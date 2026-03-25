@@ -1,0 +1,9 @@
+# Hook: Post-Execution Checklist
+
+Trigger: After agent execution finishes
+Purpose: Ensure quality, documentation, and review after every task.
+
+Action:
+- Automatically remind the user to complete `docs/checklists/post-execution-checklist.md`
+- Require confirmation before marking the task as complete
+- Display message: "Please complete the Post-Execution Checklist"

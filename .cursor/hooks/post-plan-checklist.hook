@@ -1,0 +1,9 @@
+# Hook: Post-Plan Checklist
+
+Trigger: After a plan is generated or completed
+Purpose: Ensure the Pre-Plan Checklist is always respected before moving to execution.
+
+Action:
+- Automatically remind the user to complete `docs/checklists/pre-plan-checklist.md`
+- Do not allow progression to execution until the checklist is confirmed
+- Display message: "Please complete the Pre-Plan Checklist before proceeding"

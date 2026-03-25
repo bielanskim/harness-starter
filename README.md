@@ -17,6 +17,9 @@ It combines:
 - `docs/autonomy-grants/` — For L4 supervised autonomous actions
 - Specialized rules (`devops-rules.mdc`, `testing-rules.mdc`)
 - Skills system (research-landscape)
+- Hooks system (recommended hooks for automatic enforcement)
+- `docs/hooks.md` — Guide for configuring hooks
+- `docs/symphony-integration.md` — Guide for integrating Symphony orchestration
 
 ## Core Principles (Harness Engineering)
 - Humans provide intent. Agents propose plans and wait for explicit approval.
