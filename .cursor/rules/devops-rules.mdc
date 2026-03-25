@@ -1,0 +1,28 @@
+---
+description: DevOps-specific rules for Harness Engineering projects
+glob: "**"
+alwaysApply: true
+priority: 80
+---
+
+# DevOps Rules — Harness Engineering
+
+## Core Principles
+- Infrastructure as Code is preferred.
+- All deployments must go through CI/CD pipelines.
+- Observability must be considered in every meaningful change.
+- Changes to infrastructure or pipelines require explicit approval.
+
+## Hard Stops
+- Never run production deployment commands (`terraform apply`, `helm upgrade`, etc.) without explicit user approval.
+- Never modify CI/CD pipeline files without a plan and approval.
+- Never push directly to production branches.
+- Never auto-install or upgrade infrastructure tools.
+
+## Recommended Practices
+- Use feature branches for all infrastructure changes.
+- Include observability updates in every relevant plan.
+- Document deployment steps in `docs/`.
+- Prefer GitOps (declarative) approaches.
+
+Follow these rules in addition to `harness-engineering.mdc`.

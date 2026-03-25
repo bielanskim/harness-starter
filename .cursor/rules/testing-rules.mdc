@@ -1,0 +1,26 @@
+---
+description: Testing-specific rules for Harness Engineering projects
+glob: "**"
+alwaysApply: true
+priority: 75
+---
+
+# Testing Rules — Harness Engineering
+
+## Core Principles
+- All new code must have accompanying tests.
+- Tests must be hermetic (no shared state, no external dependencies in unit tests).
+- Prefer fast, isolated unit tests.
+- Test coverage should be considered in every plan.
+
+## Hard Stops
+- Never merge code without passing tests.
+- Never disable tests to "make it work".
+- Never commit code that breaks existing tests.
+
+## Test Strategy
+- Unit tests → fast and isolated
+- Integration tests → only when necessary and documented
+- End-to-end tests → run on Cloud Agent when heavy
+
+Follow these rules in addition to `harness-engineering.mdc`.
