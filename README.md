@@ -29,7 +29,7 @@ It establishes:
 This repository is fully prepared for Symphony multi-agent orchestration:
 - Agents can propose changes safely on isolated branches.
 - Every proposal is independently validated by the full harness.
-- Clear mechanical handoff via `AGENTS.md`, `docs/`, and the rollback playbook.
+- Clear mechanical handoff via `AGENTS.md`, `docs/`, and `docs/rollback-playbook.md`.
 
 When ready, the Symphony orchestrator can be layered on top of this guarded foundation.
 
@@ -37,7 +37,7 @@ When ready, the Symphony orchestrator can be layered on top of this guarded foun
 1. Use this repo as a GitHub template for new agentic projects.
 2. Open the project in Cursor.
 3. Always start by reading `SOUL.md` and `AGENTS.md`.
-4. All development happens via feature/fix branches + Pull Request + full harness.
-5. Follow the rollback playbook for any recovery needs.
+4. All development happens via `agent/` or `fix/` branches + Pull Request + full harness.
+5. Follow `docs/rollback-playbook.md` for any recovery needs.
 
 Last updated: March 2026
