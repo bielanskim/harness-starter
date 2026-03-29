@@ -3,44 +3,42 @@
 A governance template for safe, controlled **agentic development** using **Harness Engineering + Symphony** in Cursor.
 
 ## Purpose
-This template provides the rules, structure, and guardrails needed to build reliable multi-agent systems while maintaining strong human oversight.
+This template provides the mechanical rules, guardrails, and structure needed to build reliable multi-agent systems while keeping strong human oversight and machine-legible enforcement.
 
-It combines:
-- **Harness Engineering** — the governing rules and safety layer (progressive disclosure, autonomy levels, checklists, cautious execution)
-- **Symphony readiness** — the foundation for multi-agent orchestration (modular tasks, clear handoff, shared ground truth)
+It establishes:
+- **Harness Engineering** — the controlled execution surface (branch strategy, PR gate, full harness validation, failure policy)
+- **Symphony readiness** — a machine-legible foundation for safe multi-agent orchestration
 
 ## What's Included
-- `.cursor/rules/harness-engineering.mdc` — Core governing rules (always active)
-- `AGENTS.md` — Central contract and table of contents
-- `autonomy-levels.md` — L0–L4 autonomy framework with clear approval gates
-- `docs/checklists/` — Pre-plan and post-execution checklists
-- `docs/autonomy-grants/` — For L4 supervised autonomous actions
-- Specialized rules (`devops-rules.mdc`, `testing-rules.mdc`)
-- Skills system (research-landscape)
-- Hooks system (recommended hooks for automatic enforcement)
-- `docs/hooks.md` — Guide for configuring hooks
-- `docs/symphony-integration.md` — Guide for integrating Symphony orchestration
+- .githooks/pre-push — local enforcement against direct pushes to main
+- .github/workflows/ — CI harness (ci/lint, ci/tests, ci/simulations)
+- AGENTS.md — strict mechanical contract for all agents
+- docs/rollback-playbook.md — safe recovery procedures
+- docs/ — documentation, plans, and task handoff context
+- Specialized rules in .cursor/rules/
+- Skills system in .cursor/skills/
+- SOUL.md — agent persona and behavioral boundaries
 
-## Core Principles (Harness Engineering)
-- Humans provide intent. Agents propose plans and wait for explicit approval.
-- Progressive disclosure: Plan → Approve → Execute → Review.
-- Repository is the single source of truth.
-- Cloud Agents only for heavy tasks, with clear approval and risk disclosure.
+## Core Harness Principles
+- main is immutable verified truth
+- All changes go through gent/YYYY-MM-DD-... branches + PR + full harness
+- Failure policy: delete bad branches, never fix in place
+- Pre-push hook + GitHub branch protection enforce the rules mechanically
+- Progressive disclosure: Human intent → Agent proposal → Harness validation → Human approval
 
 ## Symphony Readiness
-This template is structured to enable Symphony (multi-agent orchestration):
-- Modular task boundaries ("one agent, one concern")
-- Shared ground truth via `docs/` and `AGENTS.md`
-- Task handoff context written to `docs/`
-- Autonomy level inheritance between agents
-- Pre-plan and post-execution checklists enforced by Harness rules
+This repo is now fully machine-legible and ready for Symphony multi-agent orchestration:
+- Parallel agents can propose changes safely
+- All proposals are independently validated by the harness
+- Clear handoff via docs/ and AGENTS.md
 
-When you are ready, you can bring in the Symphony orchestrator on top of this foundation for coordinated multi-agent workflows.
+When you are ready, bring in the Symphony orchestrator on top of this guarded foundation.
 
 ## How to Use
-1. Use this as a GitHub template for new projects, or apply the structure to an existing one.
-2. Open in Cursor with the **Harness-Agentic** (or your custom) profile.
-3. Start every session with a Plan — the rules are already enforced.
-4. When ready for multi-agent work, integrate Symphony orchestration.
+1. Use this repo as a GitHub template for new projects.
+2. Open in Cursor.
+3. Follow AGENTS.md for all agent behavior.
+4. Start every session by reading SOUL.md and AGENTS.md.
+5. All work happens via agent branches + PRs.
 
 Last updated: March 2026
