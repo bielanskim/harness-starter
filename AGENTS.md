@@ -28,15 +28,6 @@ All agents operating in this repository must follow these mechanical rules. This
 
 ## 2. Pull Request Gate
 - Every change must be proposed via PR to `main`
-All agents operating in this repository must follow these mechanical rules.
-
-## 1. Branch Strategy (Mandatory)
-- Work only on branches prefixed with agent/YYYY-MM-DD-short-kebab-description
-- Never commit or push directly to main
-- Example: agent/2026-03-27-auth-refactor
-
-## 2. Pull Request Gate
-- Every change must be proposed via PR to main
 - PR must include:
   - Clear intent summary
   - What changed
@@ -49,14 +40,9 @@ All agents operating in this repository must follow these mechanical rules.
 - If any check fails (test, simulation, lint, human review): delete the branch entirely
 - Never "fix in place" on a failing branch
 - Regenerate from clean `main`
-- Use the §1 prefixes (`agent/...` or `fix/...`); deleting a branch under this policy is for **failed** checks on that branch, not for a naming typo by itself.
 
 ## 4. Main Branch Protection
 - `main` is immutable verified truth
-- Regenerate from clean main
-
-## 4. Main Branch Protection
-- main is immutable verified truth
 - Protected by GitHub rule + pre-push hook
 - No direct pushes, no force pushes, no deletions
 - Linear history enforced
@@ -64,7 +50,6 @@ All agents operating in this repository must follow these mechanical rules.
 
 ## 5. Local Enforcement
 - Pre-push hook prevents accidental pushes to `main`
-- Pre-push hook prevents accidental pushes to main
 - Use ALLOW_MASTER_PUSH=true git push only in true emergencies
 
 ## 6. Symphony Readiness
